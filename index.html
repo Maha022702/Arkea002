@@ -2,80 +2,254 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EZHIL - Two-Wheeler Accessories Store</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZHIL Bike Accessories - Premium Two Wheeler Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .header {
+            background: #ff4444;
+            padding: 20px;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2');
+            background-size: cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .products {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #ff4444;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff4444;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff3333;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Ride in Style</h1>
-        <p>EZHIL - Two-Wheeler Accessories in Tamil Nadu</p>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">TN Bike Gear</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#helmets">Helmets</a></li>
-            <li><a href="#jackets">Jackets</a></li>
-            <li><a href="#gloves">Gloves</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <section id="helmets" class="product-section">
-        <h2>Helmets</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="images/helmet1.jpg" alt="Classic Helmet">
-                <h3>Classic Helmet</h3>
-                <p>Price: ₹2,499</p>
-            </div>
-            <div class="product-item">
-                <img src="images/helmet2.jpg" alt="Sport Helmet">
-                <h3>Sport Helmet</h3>
-                <p>Price: ₹3,199</p>
-            </div>
-            <!-- Add more helmet products here -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Bike Accessories</h1>
+            <p>Best Quality Products at Tamil Nadu's Lowest Prices</p>
         </div>
     </section>
 
-    <section id="jackets" class="product-section">
-        <h2>Jackets</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="images/jacket1.jpg" alt="Riding Jacket">
-                <h3>Riding Jacket</h3>
-                <p>Price: ₹4,999</p>
+    <section class="products" id="products">
+        <h2>Featured Products</h2>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1580261450046-d0a30080dc9b" alt="Helmet" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Premium ISI Helmet</h3>
+                    <p class="product-price">₹1,499</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
             </div>
-            <div class="product-item">
-                <img src="images/jacket2.jpg" alt="Touring Jacket">
-                <h3>Touring Jacket</h3>
-                <p>Price: ₹5,499</p>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1612195583959-8918c4a9a71a" alt="Bike Gloves" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Racing Gloves</h3>
+                    <p class="product-price">₹899</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
             </div>
-            <!-- Add more jacket products here -->
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1622180203474-5e59e5262565" alt="Bike Cover" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">All-Weather Bike Cover</h3>
+                    <p class="product-price">₹599</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3" alt="Bike Jacket" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Armored Riding Jacket</h3>
+                    <p class="product-price">₹3,999</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1618932260643-eee4a2f652a1" alt="Knee Guard" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Premium Knee Guards</h3>
+                    <p class="product-price">₹1,299</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1598532163253-0cf6e6f070cd" alt="Raincoat" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Rider Raincoat</h3>
+                    <p class="product-price">₹799</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="gloves" class="product-section">
-        <h2>Gloves</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="images/glove1.jpg" alt="Leather Gloves">
-                <h3>Leather Gloves</h3>
-                <p>Price: ₹1,299</p>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>TN Bike Gear</h4>
+                <p>Best two-wheeler accessories in Tamil Nadu</p>
+                <p>📍 Chennai, Coimbatore, Madurai</p>
             </div>
-            <div class="product-item">
-                <img src="images/glove2.jpg" alt="Mesh Gloves">
-                <h3>Mesh Gloves</h3>
-                <p>Price: ₹999</p>
+            <div>
+                <h4>Contact</h4>
+                <p>Phone: +91 63792 44916</p>
+                <p>Email: ezhil@tnbikegear.com</p>
             </div>
-            <!-- Add more glove products here -->
+            <div>
+                <h4>Follow Us</h4>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>Twitter</p>
+            </div>
         </div>
-    </section>
-
-    <footer id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: ezhil@twowheeleraccessories.tn</p>
-        <p>Phone: +91-6379-244-916</p>
-        <p>Address: 123 Main Street, Chennai, Tamil Nadu</p>
+        <p style="text-align: center; margin-top: 30px;">© 2023 TN Bike Gear. All rights reserved.</p>
     </footer>
 </body>
 </html>
